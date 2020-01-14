@@ -1,0 +1,1 @@
+export { CloudwatchServiceFactory } from './CloudwatchServiceFactory';

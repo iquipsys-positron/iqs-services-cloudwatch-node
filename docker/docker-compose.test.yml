@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+
+  test:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.test
+    image: ${IMAGE:-pipdevs/test}
+    command: ${TEST_CMD:-npm test}
+    links:
+      - mongo
+    environment:
+      - AWS_REGION=
+      - AWS_ACCESS_KEY=
+      - AWS_ACCESS_ID=
+
+  mongo:
+    image: mongo:latest

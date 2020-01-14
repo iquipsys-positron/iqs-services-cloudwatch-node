@@ -1,0 +1,6 @@
+{
+  "name": "iqs-services-cloudwatch-node",
+  "registry": "registry.gitlab.com/iqs-services",
+  "version": "1.0.0",
+  "build": 14
+}

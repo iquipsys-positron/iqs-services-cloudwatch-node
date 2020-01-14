@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+
+  test:
+    image: ${IMAGE}
+    links:
+      - mongo
+    environment:
+      - AWS_REGION=
+      - AWS_ACCESS_KEY=
+      - AWS_ACCESS_ID=
+    ports:
+      - "8080:8080"
+
+  mongo:
+    image: mongo:latest
